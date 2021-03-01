@@ -1,0 +1,29 @@
+<%- include ('../partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Add new CampGrounds</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="price" placeholder="Price" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="Image url">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script type="text/javascript" src="/stylesheet/index.js"></script>
+<%- include ('../partials/footer.ejs') %>

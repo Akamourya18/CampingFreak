@@ -1,0 +1,29 @@
+<%- include ('../partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Add new CampGrounds</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" name="campground[price]" value="campground.price" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="campground[description]" value="<%= campground.description %>">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script type="text/javascript" src="/stylesheet/index.js"></script>
+<%- include ('../partials/footer.ejs') %>

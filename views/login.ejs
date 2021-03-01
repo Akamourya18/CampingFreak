@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="/stylesheet/login.css">
+         </head>
+<form action="/login" method="POST" class="login-form">
+  
+  <h1>Login</h1>
+  <div class="form-input-material">
+    <input type="text" name="username" id="username" placeholder=" " autocomplete="off" required class="form-control-material" />
+    <label for="username">Username</label>
+  </div>
+  <div class="form-input-material">
+    <input type="password" name="password" id="password" placeholder=" " autocomplete="off" required class="form-control-material" />
+    <label for="password">Password</label>
+  </div>
+  <button type="submit" class="btn btn-ghost">Login</button>
+  <br>
+  <a class="back" href="/campgrounds">Go Back</a>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script type="text/javascript" src="/stylesheet/index.js"></script>
+<%- include('./partials/footer.ejs') %>

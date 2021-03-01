@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheet/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        
+                        <a class="navbar-brand" href="/">Yelpcamp</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <%if(!currentUser){%>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Signup</a></li>
+                            <%}else{%>
+                                <li><a href="#">Signed In as <%=currentUser.username%></a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <% if(error && error.length>0){ %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <%}%>
+            <% if(success && success.length>0){ %>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
+            <%}%>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script type="text/javascript" src="/stylesheet/index.js"></script>
