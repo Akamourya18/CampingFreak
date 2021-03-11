@@ -18,7 +18,7 @@ var express         = require("express"),
 
 //console.log(process.env.DATABASEURL);
         //mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser:true, useUnifiedTopology:true});
-        mongoose.connect("mongodb+srv://akashmourya:hsaka@firstcluster.vjn0f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
+        mongoose.connect("mongodb+srv://<username>:<password>",{
             useNewUrlParser:true, 
             useUnifiedTopology:true}).then(() => {
                 console.log('connected to database');
