@@ -10,7 +10,7 @@ var express         = require("express"),
     Campground      = require("./models/campgrounds"),
     User            = require("./models/user")
     //seedDB          = require("./seed")
-
+require('dotenv').config();
     var commentRoutes      = require("./routes/comments"),
         campgroundRoutes   = require("./routes/campgrounds"),
         indexRoutes        = require("./routes/index");
@@ -18,7 +18,7 @@ var express         = require("express"),
 
 //console.log(process.env.DATABASEURL);
         //mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser:true, useUnifiedTopology:true});
-        mongoose.connect("mongodb+srv://<username>:<password>",{
+        mongoose.connect("mongodb+srv://" + process.env.MONGO_USERNAME + ":" + process.env.MONGO_PASSWORD,{
             useNewUrlParser:true, 
             useUnifiedTopology:true}).then(() => {
                 console.log('connected to database');
